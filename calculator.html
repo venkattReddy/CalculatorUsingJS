@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+     .myStyle{
+         margin: 20px auto;
+         width: 600px;
+         height:auto;
+         padding:20px;
+         background: #1b6d85;
+         border:2px solid green;
+     }
+        .disp{
+            width: 350px;
+            height:40px;
+            text-align: right;
+            font-size: 30px;
+            border-radius: 8px;
+            margin: 3px;
+        }
+        .btn{
+            width:60px;
+            height:60px;
+            font-size:25px;
+            border-radius:100px;
+            margin:9px;
+            background: #e0a800;
+            text-align:center;
+            line-height:40px;
+            border: 1px solid white;
+        }
+    </style>
+    <script>
+        function muCalculation(num){
+            calcu.disp.value = calcu.disp.value + num;
+        }
+        //clear function
+        function clr(){
+            calcu.disp.value = "";
+        }
+       //back space
+        function backspace(){
+            calcu.disp.value = calcu.disp.value.slice(0, calcu.disp.value.length-1);
+        }
+    </script>
+</head>
+<body>
+<div class="contaoner-fluid myStyle">
+    <h2 style="color:white;text-align:center;">Javascript Calculator</h2>
+    <div class="container" style="margin-left:90px;">
+    <form name="calcu">
+        <p><input type="text"  placeholder="0" name="disp" class="disp"></p>
+        <input type="button" class="btn" name="btn9" value="9" onclick="muCalculation(btn9.value)">
+        <input type="button" class="btn" name="btn8" value="8" onclick="muCalculation(btn8.value)">
+        <input type="button" class="btn" name="btn7" value="7" onclick="muCalculation(btn7.value)">
+        <input type="button" class="btn" name="btnadd" value="+" onclick="muCalculation(btnadd.value)"><br>
+        <input type="button" class="btn" name="btn6" value="6" onclick="muCalculation(btn6.value)">
+        <input type="button" class="btn" name="btn5" value="5" onclick="muCalculation(btn5.value)">
+        <input type="button" class="btn" name="btn4" value="4" onclick="muCalculation(btn4.value)">
+        <input type="button" class="btn" name="btnsub" value="-" onclick="muCalculation(btnsub.value)"><br>
+        <input type="button" class="btn" name="btn3" value="3" onclick="muCalculation(btn3.value)">
+        <input type="button" class="btn" name="btn2" value="2" onclick="muCalculation(btn2.value)">
+        <input type="button" class="btn" name="btn1"value="1" onclick="muCalculation(btn1.value)">
+        <input type="button" class="btn" name="btnmul" value="*" onclick="muCalculation(btnmul.value)"><br>
+        <input type="button" class="btn" name="btn0" value="0" onclick="muCalculation(btn0.value)">
+        <input type="button" class="btn" name="btnmod" value="%" onclick="muCalculation(btnmod.value)">
+        <input type="button" class="btn" name="btndt" value="." onclick="muCalculation(btndt.value)">
+        <input type="button" class="btn" name="btndiv" value="/" onclick="muCalculation(btndiv.value)"><br>
+        <input type="button" class="btn" value="=" onclick="disp.value  = eval(disp.value)">
+        <input type="button" class="btn" value="C" onclick="clr()">
+        <input type="button" class="btn" value="X" onclick="backspace()">
+        <input type="button" class="btn" value="X" onclick="backspace()">
+
+
+
+    </form>
+    </div>
+</div>
+</body>
+</html>
